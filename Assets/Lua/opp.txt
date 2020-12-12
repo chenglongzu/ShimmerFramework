@@ -1,0 +1,61 @@
+--Lua中的面向对象
+
+--封装
+--万物之父object类
+--在Object表中定义的self就是代表当前表
+Object = {}
+Object.id = 1
+
+--类似于C#中的实例化对象的操作
+function Object:new( ... )
+	-- body
+	local obj = {}
+	--self 表示调用这个函数本身的表或者类
+	self.__index = self
+
+	setmetatable(obj,self)
+
+	return obj
+end
+
+--继承
+--继承方法，由外部调用实现继承
+function Object:subClass( className )
+	-- body
+	--通过传入的类名参数在大G表中声明一个新的表
+	_G[className]={}
+	--将这个表赋值给本地表的变量
+	--引用类型，存储的其实是计算机地址的引用
+	local obj = _G[className]
+
+	obj.base = self
+
+	--设置_index
+	self.__index=self
+	--设置元表
+	setmetatable(obj,self)
+end
+
+--多态
+Object:subClass("GameObject")
+GameObject.pos_x = 1
+GameObject.pos_y = 2
+
+function GameObject:Move()
+	-- body
+	print("父级方法的内容")
+end
+
+
+--实例化Gameobject类并打印其中变量和使用其中函数
+GameObject:subClass("Person")
+
+function Person:Move( ... )
+	Person.base.Move()
+	print("重写的内容")
+end
+
+person1 =Person:new();
+
+person1.Move();
+

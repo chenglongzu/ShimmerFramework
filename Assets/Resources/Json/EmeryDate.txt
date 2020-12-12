@@ -1,0 +1,22 @@
+[
+	{
+		"Name":"Turrent",
+		"Damage":5
+	},
+	{
+		"Name":"Missle",
+		"Damage":10
+	},
+	{
+		"Name":"DogWalk",
+		"Damage":5
+	},
+	{
+		"Name":"DogFly",
+		"Damage":7
+	},
+	{
+		"Name":"Trap",
+		"Damage":1
+	}
+]
