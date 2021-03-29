@@ -6,12 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Socket/GameLogin.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
-    path: Assets/Scenes/Socket/GameCIty.unity
-    guid: 97fd57519d4fab643883e42b492765c0
-  - enabled: 1
-    path: Assets/Scenes/Socket/GameArena.unity
-    guid: 84ef3c665661305458533959a16729a0
+    path: Assets/Download/Scenes/MainScene.unity
+    guid: 18fe2590fb6fc8344b18ab20f0340b1f
   m_configObjects: {}

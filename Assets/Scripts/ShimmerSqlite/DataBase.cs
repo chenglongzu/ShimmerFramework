@@ -5,7 +5,7 @@
     /// </summary>
     public abstract class DataBase
     {
-        public string account;
+        public int id;
 
         //创建数据库时初始化数据库用
         public abstract string[] NameToArray();
